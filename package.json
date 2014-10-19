@@ -1,0 +1,19 @@
+{
+  "name": "json-human-buffer",
+  "description": "human readable json, containing buffers",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dominictarr/json-human-buffer",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dominictarr/json-human-buffer.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tape": "~3.0.1"
+  },
+  "scripts": {
+    "test": "set -e; for t in test/*.js; do node $t; done"
+  },
+  "author": "Dominic Tarr <dominic.tarr@gmail.com> (http://dominictarr.com)",
+  "license": "MIT"
+}
