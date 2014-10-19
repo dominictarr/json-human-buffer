@@ -44,6 +44,5 @@ exports.stringify = function (obj, _, indent) {
 }
 
 exports.parse = function (string, _) {
-  console.log(JSON.parse(string, _))
   return fromHuman(JSON.parse(string, _))
 }
