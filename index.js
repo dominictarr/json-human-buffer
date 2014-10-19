@@ -1,16 +1,17 @@
 function isObject (o) {
-  return o && 'object' === typeof o
+  return o && 'object' === typeof o && !Buffer.isBuffer(o)
 }
 
 function clone (obj, map) {
   obj = map(obj)
   if(!isObject(obj)) return obj
-
   var a = Array.isArray(obj) ? [] : {}
 
   for(var key in obj) {
-    var value = map(obj[key])
-    a[key] = isObject(value) ? clone(value, map) : value
+    if(Object.hasOwnProperty.call(obj, key)) {
+      var value = map(obj[key])
+      a[key] = isObject(value) ? clone(value, map) : value
+    }
   }
 
   return a
