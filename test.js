@@ -18,7 +18,9 @@ var expected = [
 tape('stringify/parse', function (t) {
 
   expected.forEach(function (obj) {
-    t.deepEqual(obj, JSONH.parse(JSONH.stringify(obj)))
+    var encoded = JSONH.stringify(obj)
+    console.log('encoded:', encoded)
+    t.deepEqual(obj, JSONH.parse(encoded))
   })
 
   t.end()
