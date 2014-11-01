@@ -46,3 +46,6 @@ exports.stringify = function (obj, _, indent) {
 exports.parse = function (string, _) {
   return fromHuman(JSON.parse(string, _))
 }
+
+exports.fromHuman = fromHuman
+exports.toHuman = toHuman
